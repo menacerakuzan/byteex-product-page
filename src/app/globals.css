@@ -11,7 +11,7 @@
   --color-ink: #15005b;
   --color-body: #676869;
   --color-body-strong: #6c6c6c;
-  --color-muted: #828282;
+  --color-muted: #767676; /* Figma #828282, darkened to meet WCAG AA contrast */
   --color-label: #868787;
   --color-announce: #565656;
   --color-cream: #f9f0e5;

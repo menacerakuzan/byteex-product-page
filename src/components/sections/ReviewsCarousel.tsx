@@ -46,7 +46,7 @@ export function ReviewsCarousel({ reviews }: { reviews: Review[] }) {
         index={index}
         onSelect={scrollTo}
         label="Show review"
-        className="mt-[22px] lg:hidden"
+        className="mt-3 lg:hidden"
       />
     </div>
   );

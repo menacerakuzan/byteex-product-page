@@ -40,7 +40,7 @@ type DotsProps = {
 export function CarouselDots({ count, index, onSelect, label, className }: DotsProps) {
   if (count < 2) return null;
   return (
-    <div className={cn("flex items-center justify-center gap-[7px]", className)}>
+    <div className={cn("flex items-center justify-center", className)}>
       {Array.from({ length: count }, (_, i) => (
         <button
           key={i}
@@ -48,11 +48,16 @@ export function CarouselDots({ count, index, onSelect, label, className }: DotsP
           onClick={() => onSelect(i)}
           aria-label={`${label} ${i + 1} of ${count}`}
           aria-current={i === index}
-          className={cn(
-            "size-2 rounded-full transition-colors",
-            i === index ? "bg-black" : "bg-[#c4c4c4]",
-          )}
-        />
+          // 24px hit area (WCAG target size) around an 8px dot.
+          className="group flex size-6 items-center justify-center"
+        >
+          <span
+            className={cn(
+              "size-2 rounded-full transition-colors",
+              i === index ? "bg-black" : "bg-[#c4c4c4] group-hover:bg-body",
+            )}
+          />
+        </button>
       ))}
     </div>
   );
