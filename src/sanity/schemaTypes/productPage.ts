@@ -1,4 +1,3 @@
-import { DocumentIcon } from "@sanity/icons";
 import { defineArrayMember, defineField, defineType } from "sanity";
 
 const figures = (name: string, title: string, min: number, max?: number) =>
@@ -25,7 +24,6 @@ export const productPage = defineType({
   name: "productPage",
   title: "Product page",
   type: "document",
-  icon: DocumentIcon,
   groups: [
     { name: "global", title: "Global", default: true },
     { name: "hero", title: "Hero" },
