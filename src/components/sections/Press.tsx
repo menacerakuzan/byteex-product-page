@@ -48,7 +48,7 @@ export function Press({ heading, logos }: PressProps) {
         index={index}
         onSelect={scrollTo}
         label="Show logos"
-        className="mt-[18px] lg:hidden"
+        className="mt-2 lg:hidden"
       />
     </section>
   );
