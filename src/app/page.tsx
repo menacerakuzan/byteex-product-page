@@ -15,9 +15,22 @@ import { FinalCta } from "@/components/sections/FinalCta";
 
 export async function generateMetadata(): Promise<Metadata> {
   const page = await getProductPage();
+  const title = page?.seo?.title;
+  const description = page?.seo?.description;
+  const image = page?.hero.images[1];
   return {
-    title: page?.seo?.title,
-    description: page?.seo?.description,
+    title,
+    description,
+    alternates: { canonical: "/" },
+    openGraph: {
+      type: "website",
+      title,
+      description,
+      images: image
+        ? [{ url: `${image.url}?w=1200&h=630&fit=crop&auto=format`, width: 1200, height: 630, alt: image.alt }]
+        : undefined,
+    },
+    twitter: { card: "summary_large_image", title, description },
   };
 }
 
