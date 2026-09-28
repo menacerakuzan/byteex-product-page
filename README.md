@@ -2,7 +2,7 @@
 
 A responsive loungewear product landing page built from the Byteex Figma design, with all content managed in **Sanity** (headless CMS).
 
-**Live demo:** _coming soon_ · **CMS Studio:** `/studio`
+**Live demo:** <https://byteex-product-page-omega.vercel.app> · **CMS Studio:** [`/studio`](https://byteex-product-page-omega.vercel.app/studio)
 
 ![Stack](https://img.shields.io/badge/Next.js-16-black) ![TypeScript](https://img.shields.io/badge/TypeScript-5-3178c6) ![Tailwind](https://img.shields.io/badge/Tailwind_CSS-4-38bdf8) ![Sanity](https://img.shields.io/badge/Sanity-v6-f03e2f)
 
