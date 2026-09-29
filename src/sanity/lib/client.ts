@@ -5,7 +5,8 @@ export const client = createClient({
   projectId,
   dataset,
   apiVersion,
-  // Published content only — served from Sanity's edge CDN.
-  useCdn: true,
+  // Responses are already cached by Next.js (ISR + tags), so query the live
+  // API: the Sanity CDN could serve stale data right after a publish webhook.
+  useCdn: false,
   perspective: "published",
 });
